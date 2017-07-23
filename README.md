@@ -2,7 +2,7 @@
 Full Webpack plugin for angular-gettext based on the [angular-gettext-cli utility](https://github.com/huston007/angular-gettext-cli). Intended for both compilation and extraction. For details see official [developer guide for angular-gettext](https://angular-gettext.rocketeer.be/dev-guide/).
 
 This utility can:
-1. extract all you strings into a separate file fo you choice
+1. extract all you strings into a separate file of you choice
 2. compile a given group of po files into the desired format
 
 # Installation
