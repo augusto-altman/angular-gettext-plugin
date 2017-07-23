@@ -13,6 +13,7 @@ $ npm -D i angular-gettext-plugin
 # Example of usage
 ```javascript
 //webpack.config.js
+
 const AngularGetTextPlugin = require('./build/angular-gettext-plugin');
 module.exports = {
   entry: './app/index.js', // your entry file
