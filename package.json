@@ -1,0 +1,30 @@
+{
+  "name": "angular-gettext-plugin",
+  "version": "1.0.0",
+  "description": "Full Webpack plugin for angular-gettext based on the angular-gettext-cli utility. Inteded for both compilation and extraction.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augusto-altman/angular-gettext-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "angular-gettext",
+    "compilation",
+    "extraction"
+  ],
+  "author": "Augusto David Altman Quaranta <augusto.altman@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/augusto-altman/angular-gettext-plugin/issues"
+  },
+  "homepage": "https://github.com/augusto-altman/angular-gettext-plugin#readme",
+  "dependencies": {
+    "angular-gettext-tools": "2.3.6",
+    "glob": "7.1.2"
+  }
+}
