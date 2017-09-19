@@ -55,7 +55,7 @@ AngularGetTextPlugin.prototype.apply = function(compiler) {
     }
 
     if (options.extractStrings) {
-      var extractor = new Extractor();
+      var extractor = new Extractor(options.extractStrings);
 
       const filePaths = glob.sync(options.extractStrings.input)
       filePaths.forEach( (fileName) => {
