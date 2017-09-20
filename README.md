@@ -43,3 +43,6 @@ module.exports = {
 
 # Options
 Support all the configuration and options of the [angular-gettext-cli utility](https://github.com/huston007/angular-gettext-cli). Check also the [angular-gettext-tools Extractor options](https://github.com/rubenv/angular-gettext-tools#options) (for the supported extractStrings options).
+
+# Changelog
+Please check the CHANGELOG.md file.
