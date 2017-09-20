@@ -33,6 +33,7 @@ module.exports = {
       extractStrings: { //optional
         input: 'app/**/*.html',
         destination: 'po/template.pot'
+        //Any of the [angular-gettext-tools Extractor options](https://github.com/rubenv/angular-gettext-tools#options)
       }
     }),
     // the rest of your plugins...

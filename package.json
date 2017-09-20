@@ -1,6 +1,6 @@
 {
   "name": "angular-gettext-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Full Webpack plugin for angular-gettext based on the angular-gettext-cli utility. Inteded for both compilation and extraction.",
   "main": "index.js",
   "scripts": {
