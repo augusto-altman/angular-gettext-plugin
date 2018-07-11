@@ -42,7 +42,21 @@ AngularGetTextPlugin.prototype.apply = function(compiler) {
       const results = compile(options.compileTranslations);
       results.forEach( (result) => {
         const { fileName, content } = result;
-        const outPath = path.join(options.compileTranslations.outputFolder, fileName);
+
+        var realfileName;
+
+        if (options.compileTranslations.compileCatalog) {
+            var language = content[2] + content[3];
+
+            realfileName = fileName.split('.');
+            realfileName.splice(1, 0, language);
+            realfileName = realfileName.join('.');
+        } else {
+            realfileName = fileName;
+        }
+
+        const outPath = path.join(options.compileTranslations.outputFolder, realfileName);
+        
         compilation.assets[outPath] = {
           source: function() {
             return content;
