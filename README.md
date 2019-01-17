@@ -28,7 +28,8 @@ module.exports = {
       compileTranslations: { //optional
         input: 'po/*.po',
         outputFolder: 'l10n',
-        format: 'json'
+        format: 'javascript', // javascript or json
+        ext: 'js' // optional
       },
       extractStrings: { //optional
         input: 'app/**/*.html',
