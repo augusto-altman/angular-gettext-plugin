@@ -20,13 +20,14 @@ function compile(options) {
     format: options.format
   });
 
+  const ext = options.format === 'javascript' ? 'js' : options.format;
   const filePaths = glob.sync(options.input)
   const outputs = filePaths.map( (filePath) => {
     const content = fs.readFileSync(filePath, options.encoding || 'utf-8');
     const fullFileName = path.basename(filePath);
     return {
       content: compiler.convertPo([content]),
-      fileName: path.basename(filePath, path.extname(fullFileName)) + '.' + options.format
+      fileName: path.basename(filePath, path.extname(fullFileName)) + '.' + (options.ext || ext)
     };
   } );
 
