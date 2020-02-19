@@ -43,6 +43,7 @@ AngularGetTextPlugin.prototype.apply = function(compiler) {
       results.forEach( (result) => {
         const { fileName, content } = result;
         const outPath = path.join(options.compileTranslations.outputFolder, fileName);
+	fs.writeFileSync(outPath, content);
         compilation.assets[outPath] = {
           source: function() {
             return content;
