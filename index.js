@@ -42,7 +42,13 @@ AngularGetTextPlugin.prototype.apply = function(compiler) {
       const results = compile(options.compileTranslations);
       results.forEach( (result) => {
         const { fileName, content } = result;
+        var contentJSON = JSON.parse(content);
+        var unprefixedJSON = contentJSON[Object.keys(contentJSON)[0]];
+        if(!fs.existsSync(options.compileTranslations.outputFolder)){
+            fs.mkdirSync(options.compileTranslations.outputFolder, { recursive:true });
+        }
         const outPath = path.join(options.compileTranslations.outputFolder, fileName);
+	fs.writeFileSync(outPath, JSON.stringify(unprefixedJSON));
         compilation.assets[outPath] = {
           source: function() {
             return content;
